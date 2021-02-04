@@ -26,8 +26,20 @@ it("should say hello", function() {
 // This is called "Red-Green-Refactor"
 // ========================================================
 
+it("should do something that you want done", function() {
+  const find_area = utils.area()
+  expect(find_area)
+})
 
+it("should find the perimeter", function() {
+  const find_perimeter = utils.perimeter()
+  expect(find_perimeter)
+})
 
+it("should find the area of a circle", function() {
+  const circle_area = utils.circleArea()
+  expect(circle_area)
+})
 
 // ========================================================
 // Level 2 Challenges
@@ -36,6 +48,11 @@ it("should say hello", function() {
 // of "Pending Tests" in Chai. Someone should write these
 // tests eventually.
 // ========================================================
+
+it("Should return an array containing all items in cart", function() {
+  const use_clearCart  = utils.clearCart()
+  return use_clearCart
+})
 
 beforeEach((done) => {
   utils.clearCart()
@@ -50,16 +67,43 @@ it("Should create a new (object) Item with name and price", function() {
   expect(item).to.have.property("quantity", 1)
 })
 
-it("Should return an array containing all items in cart")
+it("Should return an array containing all items in cart", function() {
+  const item = utils.createItem("apple", 0.99)
+  expect(item).to.be.a("object")
+  expect(item).to.have.property("name", "apple")
+  expect(item).to.have.property("price", 0.99)
+  expect(item).to.have.property("quantity", 1)
+})
 
-it("Should add a new item to the shopping cart")
+it("Should add a new item to the shopping cart", function() {
+  const item = utils.createItem("apple", 0.99)
+  expect(item).to.be.a("object")
+  expect(item).to.have.property("name", "apple")
+  expect(item).to.have.property("price", 0.99)
+  expect(item).to.have.property("quantity", 1)
+})
 
-it("Should return the number of items in the cart")
+it("Should return the number of items in the cart", function() {
+  const item = utils.createItem("apple", 0.99)
+  expect(item).to.be.a("object")
+  expect(item).to.have.property("name", "apple")
+  expect(item).to.have.property("price", 0.99)
+  expect(item).to.have.property("quantity", 1)
+})
 
-it("Should remove items from cart")
+it("Should remove items from cart", function() {
+  const item = utils.createItem("apple", 0.99)
+  expect(item).to.be.a("object")
+  expect(item).to.have.property("name", "apple")
+  expect(item).to.have.property("price", 0.99)
+  expect(item).to.have.property("quantity", 1)
+})
 
 // ========================================================
 // Stretch Challenges
+// it should update the count of items in the cart
+// it should validate that an empty cart has 0 items")
+// it should return the total cost of all items in the cart
 // ========================================================
 
 it("Should update the count of items in the cart")

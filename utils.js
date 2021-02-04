@@ -35,20 +35,23 @@ const createItem = (name, price) => {
   return { name, price, quantity: 1 }
 }
 
-const getShoppingCart = () => {
+const getShoppingCart = (item) => {
   // should return the current state of shopping cart
+  return item
 }
 
-const addItemToCart = (item) => {
+const addItemToCart = (item=[]) => {
   // should add item to shopping cart
 }
 
-const getNumItemsInCart = () => {
+const getNumItemsInCart = (item=[]) => {
   // should return the total quantity of items in cart
+  shoppingCart.length = item
 }
 
-const removeItemFromCart = (item) => {
+const removeItemFromCart = (item=[]) => {
   // should remove item from shopping cart
+  shoppingCart.remove = item[item]
 }
 
 module.exports = {
